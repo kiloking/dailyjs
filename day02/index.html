@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+        body,html{
+            height: 100%;
+            margin: 0;
+
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            background:lightgray;
+            position: relative;
+        }
+
+        #nav{
+            position: fixed;
+            left: 20px;
+            top: 20px;
+        }
+
+        #link-a,#link-b,#link-c{
+            display: inline-block;
+            padding: 1em;
+            color: white;
+            background: black;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        #a{
+            background: cyan;
+        }
+
+        #b{
+            background: yellow;
+        }
+        #c{
+            background: magenta;
+        }
+    </style>
+    <body>
+        <div id="container"></div>
+        <div id="nav">
+            <a id="link-a" href="#">AAA</a>
+            <a id="link-b" href="#">BBB</a>
+            <a id="link-c" href="#">CCC</a>
+        </div>
+        <div id="a" class="box"></div>
+        <div id="b" class="box"></div>
+        <div id="c" class="box"></div>
+
+        <script>
+            var a = $("#a");
+            var b = $("#b");
+            var c = $("#c");
+
+            a.remove();
+            b.remove();
+            c.remove();
+
+            var currentView;
+            function showView(newView){
+                if(currentView ===newView) {
+                    return;
+                }
+                // hide the currentView
+                if (currentView){
+                    
+                    currentView.animate({top:"-100%"},1000,function(){
+                        this.remove();
+                    });
+                }
+                //show newView
+                currentView = newView;
+                $("#container").append(currentView);
+                currentView.css({top:"100%"}).animate({top:0},1000, function(){
+
+                });
+            }
+
+            $("#link-a").click(function(event){
+                showView(a);
+            });
+            $("#link-b").click(function(event){
+                showView(b);
+            });
+            $("#link-c").click(function(event){
+                showView(c);
+            });
+        </script>
+    </body>
+</html>
