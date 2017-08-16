@@ -1,0 +1,66 @@
+#nav-1{
+    height: 200px;
+}
+
+#nav-1 ul, #nav-1 li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-1 a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 0.5em;
+    background: black;
+    color: white;
+    margin: 5px;
+
+}
+
+#nav-2{
+    position: fixed;
+    left:0;
+    top:0;
+    background: rgba(255,0,0,0.5);
+    width: 100%;
+    height: 60px;
+}
+
+#nav-2 ul, #nav-2 li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+#nav-2 a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0 0.5em;
+}
+
+
+
+.box{
+    height: 400px;
+}
+
+#a {
+    background: yellow;
+}
+
+#b {
+    background: cyan;
+}
+
+#c{
+    background: magenta;
+}
+
+#d{
+    background: black;
+}
