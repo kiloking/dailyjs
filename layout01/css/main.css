@@ -1,0 +1,104 @@
+*{
+    //border: 1px solid black;
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    height: 100vh;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 1;
+    height: 60px;
+    width: 100%;
+    transition: :0.5s ease;
+    background: gold;
+    padding:5px 0 5px 0;
+}
+
+.navbar .nav{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+
+.nav li{
+    list-style: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-right: 20px;
+    transition: 0.5s ease;
+    color: black;
+}
+.nav li a{
+    color: black;
+}    
+
+.logo{
+    float: left;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+section{
+    height: 100vh;
+    background-color: #ddd;
+    position: relative;
+}
+
+.section1{
+    background: url(https://newevolutiondesigns.com/images/freebies/city-wallpaper-46.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.header{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -225px;
+}
+.header h1{
+    font-size: 45px;
+    color:white;
+    font-weight: 300;
+}
+
+.con1{
+    padding: 150px 0 50px 0;
+    background: #06A2CB;
+    color: white;
+}
+
+.container{
+    width:1080px;
+    margin: 0 auto;
+}
+
+.container h2{
+    font-size: 45px;
+}
+
+.container h3{
+    font-size: 30px;
+}
+.container p{
+    font-size: 18px;
+    line-height: 30px;
+}
